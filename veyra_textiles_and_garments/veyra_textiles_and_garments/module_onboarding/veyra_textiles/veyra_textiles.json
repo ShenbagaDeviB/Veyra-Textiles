@@ -1,0 +1,24 @@
+{
+ "allow_roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "creation": "2026-11-14 16:31:46.505345",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2026-11-14 16:31:46.505345",
+ "modified_by": "Administrator",
+ "module": "Veyra Textiles And Garments",
+ "name": "Veyra Textiles",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "is_optional": 0,
+   "step": "Fabric Roll"
+  }
+ ],
+ "title": "Veyra Textiles"
+}

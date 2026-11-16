@@ -1,0 +1,255 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "FABRIC-ROLL-.####",
+ "creation": "2026-11-14 10:02:16.847828",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "basic_details_section",
+  "item",
+  "batch",
+  "purchase_receipt",
+  "purchase_receipt_item",
+  "roll_date",
+  "fabric_specification_details_section",
+  "gsm",
+  "fabric_width",
+  "shade_code",
+  "fabric_composition",
+  "fabric_construction",
+  "shrinkage",
+  "quantity_details_section",
+  "initial_length",
+  "initial_weight",
+  "consumed_length",
+  "consumed_weight",
+  "remaining_length",
+  "remaining_weight",
+  "storage_details_section",
+  "warehouse",
+  "rack_location",
+  "quality_inspection_details_section",
+  "quality_inspection",
+  "quality_status",
+  "production_details_section",
+  "work_order",
+  "job_card",
+  "additional_details_section",
+  "status",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "basic_details_section",
+   "fieldtype": "Section Break",
+   "label": "Basic Details"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "batch",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Batch",
+   "options": "Batch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_receipt",
+   "fieldtype": "Link",
+   "label": "Purchase Receipt",
+   "options": "Purchase Receipt"
+  },
+  {
+   "fieldname": "purchase_receipt_item",
+   "fieldtype": "Link",
+   "label": "Purchase Receipt Item",
+   "options": "Purchase Receipt Item"
+  },
+  {
+   "fieldname": "roll_date",
+   "fieldtype": "Datetime",
+   "label": "Roll Date"
+  },
+  {
+   "fieldname": "fabric_specification_details_section",
+   "fieldtype": "Section Break",
+   "label": "Fabric Specification Details"
+  },
+  {
+   "fetch_from": "item.custom_gsm",
+   "fieldname": "gsm",
+   "fieldtype": "Float",
+   "label": "GSM"
+  },
+  {
+   "fetch_from": "item.custom_fabric_width",
+   "fieldname": "fabric_width",
+   "fieldtype": "Float",
+   "label": "Fabric Width"
+  },
+  {
+   "fetch_from": "batch.custom_shade_code",
+   "fieldname": "shade_code",
+   "fieldtype": "Data",
+   "label": "Shade Code"
+  },
+  {
+   "fetch_from": "item.custom_fabric_composition",
+   "fieldname": "fabric_composition",
+   "fieldtype": "Data",
+   "label": "Fabric Composition"
+  },
+  {
+   "fieldname": "quantity_details_section",
+   "fieldtype": "Section Break",
+   "label": "Quantity Details"
+  },
+  {
+   "fieldname": "initial_length",
+   "fieldtype": "Float",
+   "label": "Initial Length"
+  },
+  {
+   "fieldname": "initial_weight",
+   "fieldtype": "Float",
+   "label": "Initial Weight"
+  },
+  {
+   "fieldname": "consumed_length",
+   "fieldtype": "Float",
+   "label": "Consumed Length"
+  },
+  {
+   "fieldname": "consumed_weight",
+   "fieldtype": "Float",
+   "label": "Consumed Weight"
+  },
+  {
+   "fieldname": "remaining_length",
+   "fieldtype": "Float",
+   "label": "Remaining Length",
+   "read_only": 1
+  },
+  {
+   "fieldname": "remaining_weight",
+   "fieldtype": "Float",
+   "label": "Remaining Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "storage_details_section",
+   "fieldtype": "Section Break",
+   "label": "Storage Details"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "rack_location",
+   "fieldtype": "Data",
+   "label": "Rack Location"
+  },
+  {
+   "fieldname": "quality_inspection_details_section",
+   "fieldtype": "Section Break",
+   "label": "Quality Inspection Details"
+  },
+  {
+   "fieldname": "quality_inspection",
+   "fieldtype": "Link",
+   "label": "Quality Inspection",
+   "options": "Quality Inspection"
+  },
+  {
+   "fetch_from": "quality_inspection.status",
+   "fieldname": "quality_status",
+   "fieldtype": "Data",
+   "label": "Quality Status"
+  },
+  {
+   "fieldname": "production_details_section",
+   "fieldtype": "Section Break",
+   "label": "Production Details"
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "job_card",
+   "fieldtype": "Link",
+   "label": "Job Card",
+   "options": "Job Card"
+  },
+  {
+   "fieldname": "additional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Details"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nAvailable\nReserved\nPartially Consumed\nFully Consumed\nOn Hold\nRejected"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fetch_from": "item.custom_fabric_construction",
+   "fieldname": "fabric_construction",
+   "fieldtype": "Select",
+   "label": "Fabric Construction"
+  },
+  {
+   "fetch_from": "item.custom_shrinkage",
+   "fieldname": "shrinkage",
+   "fieldtype": "Percent",
+   "label": "Shrinkage"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-11-14 20:53:29.946365",
+ "modified_by": "Administrator",
+ "module": "Veyra Textiles And Garments",
+ "name": "Fabric Roll",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

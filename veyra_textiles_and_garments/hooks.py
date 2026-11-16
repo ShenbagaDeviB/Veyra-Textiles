@@ -5,6 +5,44 @@ app_description = "This is a Textile and Garments Manufacturing Application"
 app_email = "shenbagadevi3306@gmail.com"
 app_license = "mit"
 
+fixtures=[
+    {
+        "dt": "Custom Field",
+    },
+    {
+        "dt": "Print Format",
+        "filters":[
+            ["name","in",["Fabric Roll Print Format"]]
+        ]
+    },
+    {
+        "dt": "Report",
+        "filters":[
+            ["name","in",["Fabric Roll Stock","Cutting Wastage Report"]]
+        ]
+    },
+    {
+        "dt":"Web Form",
+        "filters":[
+            ["name","in",["Application For Job"]]
+        ]
+    },
+    {
+        "dt":"Workflow",
+        "filters":[
+            ["name","in",["Fabric Roll"]]
+        ]
+    }
+]
+
+doctype_js = {"Quality Inspection" : "public/js/doctype.js"}
+
+doc_events = {
+ 	"Purchase Receipt": {
+ 		"before_cancel": "veyra_textiles_and_garments.events.event.cancellation_policy"
+ 	}
+}
+
 # Apps
 # ------------------
 
