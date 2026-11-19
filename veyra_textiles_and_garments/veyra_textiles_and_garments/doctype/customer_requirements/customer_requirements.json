@@ -2,10 +2,12 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-11-14 19:19:51.330312",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "naming_series",
   "customer_name",
   "requirements"
  ],
@@ -19,15 +21,22 @@
    "fieldname": "requirements",
    "fieldtype": "Small Text",
    "label": "Requirements"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming series",
+   "options": "CUST-.###"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-11-14 19:20:39.082225",
+ "modified": "2026-11-19 12:57:11.130572",
  "modified_by": "Administrator",
  "module": "Veyra Textiles And Garments",
  "name": "Customer Requirements",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {

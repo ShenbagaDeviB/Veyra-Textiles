@@ -35,13 +35,24 @@ fixtures=[
     }
 ]
 
-doctype_js = {"Quality Inspection" : "public/js/doctype.js"}
+doctype_js = {
+    "Quality Inspection" : "public/js/quality_inspection.js",
+    "Item": "public/js/item.js",
+    "Purchase Receipt": "public/js/purchase_receipt.js"
+}
 
 doc_events = {
  	"Purchase Receipt": {
  		"before_cancel": "veyra_textiles_and_garments.events.event.cancellation_policy"
  	}
 }
+
+scheduler_events = {
+    "daily": [
+        "veyra_textiles_and_garments.events.tasks.check_low_fabric_rolls"
+    ]
+}
+
 
 # Apps
 # ------------------

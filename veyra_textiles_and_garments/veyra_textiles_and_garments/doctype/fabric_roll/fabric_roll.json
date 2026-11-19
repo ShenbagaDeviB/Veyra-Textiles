@@ -38,7 +38,8 @@
   "job_card",
   "additional_details_section",
   "status",
-  "remarks"
+  "remarks",
+  "amended_from"
  ],
  "fields": [
   {
@@ -222,12 +223,22 @@
    "fieldname": "shrinkage",
    "fieldtype": "Percent",
    "label": "Shrinkage"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fabric Roll",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-11-14 20:53:29.946365",
+ "modified": "2026-11-18 10:35:45.813888",
  "modified_by": "Administrator",
  "module": "Veyra Textiles And Garments",
  "name": "Fabric Roll",
